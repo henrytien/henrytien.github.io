@@ -79,7 +79,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -98,9 +98,9 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Articles',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Catégories',
+            CATEGORIES: 'Categories',
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
@@ -132,7 +132,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -152,16 +152,16 @@
             <h2 id="name">Henry</h2>
             <h3 id="title">C/C++/C#  &amp; Gamer</h3>
             <span id="location"><i class="fas fa-map-marker-alt" style="padding-right: 5px"></i>Shanghai, China</span>
-            <a id="follow" target="_blank" href="https://github.com/henrytien/">SUIVRE</a>
+            <a id="follow" target="_blank" href="https://github.com/henrytien/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                3
-                <span>Articles</span>
+                4
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Tag</span>
+                <span>tag</span>
             </div>
         </div>
         
@@ -209,7 +209,7 @@
 
             
             <section id="main">
-    <article id="post-126. Word Ladder II" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-贝塞尔曲线和抛物线以及向量计算" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -217,7 +217,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2018/09/14/126. Word Ladder II/">126. Word Ladder II</a>
+            <a class="article-title" href="/2018/09/29/贝塞尔曲线和抛物线以及向量计算/">贝塞尔曲线和抛物线以及向量计算</a>
         </h1>
     
 
@@ -226,8 +226,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/09/14/126. Word Ladder II/">
-            <time datetime="2018-09-14T02:38:25.000Z" itemprop="datePublished">2018-09-14</time>
+        <a href="/2018/09/29/贝塞尔曲线和抛物线以及向量计算/">
+            <time datetime="2018-09-29T08:13:19.000Z" itemprop="datePublished">2018-09-29</time>
         </a>
     </div>
 
@@ -235,7 +235,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+        <a class="article-category-link" href="/categories/game/">game</a>
     </div>
 
                         
@@ -247,8 +247,11 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p><a href="https://leetcode.com/problems/word-ladder-ii/description/" target="_blank" rel="noopener">126. Word Ladder II</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; findLadders(<span class="built_in">string</span> beginWord, <span class="built_in">string</span> endWord, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; wordList) &#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; res;</span><br><span class="line">		<span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt; visit;  <span class="comment">//notice we need to clear visited word in list after finish this level of BFS</span></span><br><span class="line">		<span class="built_in">queue</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; q;</span><br><span class="line">		<span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt; wordlist(wordList.begin(), wordList.end());</span><br><span class="line">		q.push(&#123; beginWord &#125;);</span><br><span class="line">		<span class="keyword">bool</span> flag = <span class="literal">false</span>; <span class="comment">//to see if we find shortest path</span></span><br><span class="line">		<span class="keyword">while</span> (!q.empty()) &#123;</span><br><span class="line">			<span class="keyword">int</span> size = q.size();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;size; i++) &#123;            <span class="comment">//for this level</span></span><br><span class="line">				<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; cur = q.front();</span><br><span class="line">				q.pop();</span><br><span class="line">				<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; newadd = addWord(cur.back(), wordlist);</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j&lt;newadd.size(); j++) &#123;   <span class="comment">//add a word into path</span></span><br><span class="line">					<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; newline(cur.begin(), cur.end());</span><br><span class="line">					newline.push_back(newadd[j]);</span><br><span class="line">					<span class="keyword">if</span> (newadd[j] == endWord) &#123;</span><br><span class="line">						flag = <span class="literal">true</span>;</span><br><span class="line">						res.push_back(newline);</span><br><span class="line">					&#125;</span><br><span class="line">					visit.insert(newadd[j]);</span><br><span class="line">					q.push(newline);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (flag) <span class="keyword">break</span>;  <span class="comment">//do not BFS further </span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">auto</span> it = visit.begin(); it != visit.end(); it++) wordlist.erase(*it); <span class="comment">//erase visited one </span></span><br><span class="line">			visit.clear();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// find words with one char different in dict</span></span><br><span class="line">	<span class="comment">// hot-&gt;[dot,lot]</span></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; addWord(<span class="built_in">string</span> word, <span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt;&amp; wordlist) &#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;word.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">char</span> s = word[i];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">char</span> c = <span class="string">'a'</span>; c &lt;= <span class="string">'z'</span>; c++) &#123;</span><br><span class="line">				word[i] = c;</span><br><span class="line">				<span class="keyword">if</span> (wordlist.count(word)) res.push_back(word);</span><br><span class="line">			&#125;</span><br><span class="line">			word[i] = s;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//#if DEBUG</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Solution a;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">string</span> beginWord = <span class="string">"hit"</span>, endWord = <span class="string">"cog"</span>;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;	wordList = &#123; <span class="string">"hot"</span>, <span class="string">"dot"</span>, <span class="string">"dog"</span>, <span class="string">"lot"</span>, <span class="string">"log"</span>, <span class="string">"cog"</span> &#125;;</span><br><span class="line">	</span><br><span class="line">	a.findLadders(beginWord, endWord, wordList);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//#endif</span></span><br></pre></td></tr></table></figure>
+            <p>贝塞尔曲线和抛物线以及向量计算</p>
+<h2 id="贝塞尔曲线"><a href="#贝塞尔曲线" class="headerlink" title="贝塞尔曲线"></a>贝塞尔曲线</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">float</span>[,] calculate(<span class="keyword">float</span>[,] poss, <span class="keyword">int</span> precision)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//维度，坐标轴数（二维坐标，三维坐标...）</span></span><br><span class="line">    <span class="keyword">int</span> dimersion = poss.Rank;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//贝塞尔曲线控制点数（阶数）</span></span><br><span class="line">    <span class="keyword">int</span> number = poss.Length/<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//控制点数不小于 2 ，至少为二维坐标系</span></span><br><span class="line">    <span class="keyword">if</span> (number &lt; <span class="number">2</span> || dimersion &lt; <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">float</span>[,] result = <span class="keyword">new</span> <span class="keyword">float</span>[precision,dimersion];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>[] mi = <span class="keyword">new</span> <span class="keyword">int</span>[number];</span><br><span class="line">    mi[<span class="number">0</span>] = mi[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= number; i++)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] t = <span class="keyword">new</span> <span class="keyword">int</span>[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; t.Length; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            t[j] = mi[j];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        mi[<span class="number">0</span>] = mi[i - <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i - <span class="number">2</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            mi[j + <span class="number">1</span>] = t[j] + t[j + <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//计算坐标点</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; precision; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">float</span> t = (<span class="keyword">float</span>)i / precision;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; dimersion; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">double</span> temp = <span class="number">0.0</span>f;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; number; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                temp += Math.Pow(<span class="number">1</span> - t, number - k - <span class="number">1</span>) * poss[k,j] * Math.Pow(t, k) * mi[k];</span><br><span class="line">            &#125;</span><br><span class="line">            result[i,j] = (<span class="keyword">float</span>)temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="抛物线系数计算"><a href="#抛物线系数计算" class="headerlink" title="抛物线系数计算"></a>抛物线系数计算</h2><p>以目标点为对称轴(下抛物线)，注释的以追击为对称轴(上抛物线)<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetFactor</span>(<span class="params"><span class="keyword">float</span> x1,<span class="keyword">float</span> y1,<span class="keyword">float</span> x2, <span class="keyword">float</span> y2,<span class="keyword">ref</span> <span class="keyword">float</span> a, <span class="keyword">ref</span> <span class="keyword">float</span> b,<span class="keyword">ref</span> <span class="keyword">float</span> c</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//a = (y1 - y2) / (2 * x1 * x2 - x1 * x1 - x2 * x2);</span></span><br><span class="line">    a = (y1 - y2) / (x1 * x1 +x2* x2 <span class="number">-2</span>* x2* x1);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// b = -2 * x1 * (y1 - y2) / a;</span></span><br><span class="line">    b = <span class="number">-2</span> * x2 * a;</span><br><span class="line">    c = y1 - a * x1 * x1 - b * x1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以下是使用的一个例子：<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">float</span> b = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">float</span> c = <span class="number">0.0</span>f;</span><br><span class="line"></span><br><span class="line">GetFactor(m_fX, m_fY, m_target.m_fX, m_target.m_fY, <span class="keyword">ref</span> a,<span class="keyword">ref</span> b,<span class="keyword">ref</span> c);</span><br><span class="line"><span class="keyword">float</span> deltaX = m_myMap.GetDeltaTime() * <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(m_fX &gt; m_target.m_fX)</span><br><span class="line">    m_fX -= deltaX;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    m_fX += deltaX;</span><br><span class="line">m_fY = a * m_fX * m_fX + b * m_fX + c;</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用向量更完美的解决"><a href="#使用向量更完美的解决" class="headerlink" title="使用向量更完美的解决"></a>使用向量更完美的解决</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> deltaX = m_target.getX() - m_fX;</span><br><span class="line"><span class="keyword">float</span> deltaY = m_target.getY() - m_fY;</span><br><span class="line"><span class="keyword">float</span> distance = (<span class="keyword">float</span>)Math.Sqrt(deltaX * deltaX + deltaY * deltaY);</span><br><span class="line"><span class="keyword">float</span> x_missile = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">float</span> y_missile = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">if</span> (distance &gt; skill.SkillDefine.DistanceEpsilon)</span><br><span class="line">&#123;</span><br><span class="line">    x_missile = deltaX / distance;</span><br><span class="line">    y_missile = deltaY / distance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">m_fPhySpeedX = x_missile * <span class="number">20</span> * <span class="number">0.2</span>f + m_fPhySpeedX * <span class="number">0.8</span>f;</span><br><span class="line">m_fPhySpeedY = y_missile * <span class="number">20</span> * <span class="number">0.2</span>f + m_fPhySpeedY * <span class="number">0.8</span>f;</span><br><span class="line"></span><br><span class="line">m_fX += m_myMap.GetDeltaTime() * m_fPhySpeedX;</span><br><span class="line">m_fY += m_myMap.GetDeltaTime() * m_fPhySpeedY;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -258,7 +261,7 @@
 
 </div>
 
-    <a data-url="https://henrytien.github.io/2018/09/14/126. Word Ladder II/" data-id="cjm1fla880001240xm5ylqx38" class="article-share-link"><i class="fas fa-share"></i>Partager</a>
+    <a data-url="https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/" data-id="cjmn5v2d10007us0xf0hgs87u" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -326,7 +329,7 @@
 
             
     
-        <a href="https://henrytien.github.io/2018/09/14/126. Word Ladder II/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/14/126. Word Ladder II/">Commentaires</a>
+        <a href="https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/">Comments</a>
     
 
         </footer>
@@ -385,7 +388,7 @@
 
 </div>
 
-    <a data-url="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/" data-id="cjm1fla8g0006240xmu7rbbqu" class="article-share-link"><i class="fas fa-share"></i>Partager</a>
+    <a data-url="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/" data-id="cjmn5v2cr0001us0xbw7anzrl" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -453,7 +456,134 @@
 
             
     
-        <a href="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/">Commentaires</a>
+        <a href="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-126. Word Ladder II" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/09/14/126. Word Ladder II/">126. Word Ladder II</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fas fa-calendar-alt"></i>
+        <a href="/2018/09/14/126. Word Ladder II/">
+            <time datetime="2018-09-14T02:38:25.000Z" itemprop="datePublished">2018-09-14</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fas fa-folder"></i>
+        <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+    </div>
+
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p><a href="https://leetcode.com/problems/word-ladder-ii/description/" target="_blank" rel="noopener">126. Word Ladder II</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; findLadders(<span class="built_in">string</span> beginWord, <span class="built_in">string</span> endWord, <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&amp; wordList) &#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; res;</span><br><span class="line">		<span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt; visit;  <span class="comment">//notice we need to clear visited word in list after finish this level of BFS</span></span><br><span class="line">		<span class="built_in">queue</span>&lt;<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;&gt; q;</span><br><span class="line">		<span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt; wordlist(wordList.begin(), wordList.end());</span><br><span class="line">		q.push(&#123; beginWord &#125;);</span><br><span class="line">		<span class="keyword">bool</span> flag = <span class="literal">false</span>; <span class="comment">//to see if we find shortest path</span></span><br><span class="line">		<span class="keyword">while</span> (!q.empty()) &#123;</span><br><span class="line">			<span class="keyword">int</span> size = q.size();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;size; i++) &#123;            <span class="comment">//for this level</span></span><br><span class="line">				<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; cur = q.front();</span><br><span class="line">				q.pop();</span><br><span class="line">				<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; newadd = addWord(cur.back(), wordlist);</span><br><span class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j&lt;newadd.size(); j++) &#123;   <span class="comment">//add a word into path</span></span><br><span class="line">					<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; newline(cur.begin(), cur.end());</span><br><span class="line">					newline.push_back(newadd[j]);</span><br><span class="line">					<span class="keyword">if</span> (newadd[j] == endWord) &#123;</span><br><span class="line">						flag = <span class="literal">true</span>;</span><br><span class="line">						res.push_back(newline);</span><br><span class="line">					&#125;</span><br><span class="line">					visit.insert(newadd[j]);</span><br><span class="line">					q.push(newline);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (flag) <span class="keyword">break</span>;  <span class="comment">//do not BFS further </span></span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">auto</span> it = visit.begin(); it != visit.end(); it++) wordlist.erase(*it); <span class="comment">//erase visited one </span></span><br><span class="line">			visit.clear();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// find words with one char different in dict</span></span><br><span class="line">	<span class="comment">// hot-&gt;[dot,lot]</span></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; addWord(<span class="built_in">string</span> word, <span class="built_in">unordered_set</span>&lt;<span class="built_in">string</span>&gt;&amp; wordlist) &#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; res;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;word.size(); i++) &#123;</span><br><span class="line">			<span class="keyword">char</span> s = word[i];</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">char</span> c = <span class="string">'a'</span>; c &lt;= <span class="string">'z'</span>; c++) &#123;</span><br><span class="line">				word[i] = c;</span><br><span class="line">				<span class="keyword">if</span> (wordlist.count(word)) res.push_back(word);</span><br><span class="line">			&#125;</span><br><span class="line">			word[i] = s;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//#if DEBUG</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	Solution a;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">string</span> beginWord = <span class="string">"hit"</span>, endWord = <span class="string">"cog"</span>;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;	wordList = &#123; <span class="string">"hot"</span>, <span class="string">"dot"</span>, <span class="string">"dog"</span>, <span class="string">"lot"</span>, <span class="string">"log"</span>, <span class="string">"cog"</span> &#125;;</span><br><span class="line">	</span><br><span class="line">	a.findLadders(beginWord, endWord, wordList);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//#endif</span></span><br></pre></td></tr></table></figure>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://henrytien.github.io/2018/09/14/126. Word Ladder II/" data-id="cjmn5v2cv0003us0xtfzjrgfc" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fab fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fab fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fab fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fab fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://henrytien.github.io/2018/09/14/126. Word Ladder II/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/14/126. Word Ladder II/">Comments</a>
     
 
         </footer>
@@ -515,7 +645,7 @@
 
 </div>
 
-    <a data-url="https://henrytien.github.io/2018/09/13/hello-world/" data-id="cjm1fla8c0003240xyzrpktac" class="article-share-link"><i class="fas fa-share"></i>Partager</a>
+    <a data-url="https://henrytien.github.io/2018/09/13/hello-world/" data-id="cjmn5v2d00006us0x4px2t4ru" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -583,7 +713,7 @@
 
             
     
-        <a href="https://henrytien.github.io/2018/09/13/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/13/hello-world/">Commentaires</a>
+        <a href="https://henrytien.github.io/2018/09/13/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/13/hello-world/">Comments</a>
     
 
         </footer>
@@ -599,14 +729,14 @@
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Récents</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
                 
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/09/14/126. Word Ladder II/" class="thumbnail">
+                            <a href="/2018/09/29/贝塞尔曲线和抛物线以及向量计算/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -616,9 +746,9 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/algorithm/">algorithm</a></p>
-                            <p class="item-title"><a href="/2018/09/14/126. Word Ladder II/" class="title">126. Word Ladder II</a></p>
-                            <p class="item-date"><time datetime="2018-09-14T02:38:25.000Z" itemprop="datePublished">2018-09-14</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/game/">game</a></p>
+                            <p class="item-title"><a href="/2018/09/29/贝塞尔曲线和抛物线以及向量计算/" class="title">贝塞尔曲线和抛物线以及向量计算</a></p>
+                            <p class="item-date"><time datetime="2018-09-29T08:13:19.000Z" itemprop="datePublished">2018-09-29</time></p>
                         </div>
                     </li>
                 
@@ -637,6 +767,25 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/algorithm/">algorithm</a></p>
                             <p class="item-title"><a href="/2018/09/14/84. Largest Rectangle in Histogram/" class="title">Largest Rectangle in Histogram</a></p>
+                            <p class="item-date"><time datetime="2018-09-14T02:38:25.000Z" itemprop="datePublished">2018-09-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/09/14/126. Word Ladder II/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/algorithm/">algorithm</a></p>
+                            <p class="item-title"><a href="/2018/09/14/126. Word Ladder II/" class="title">126. Word Ladder II</a></p>
                             <p class="item-date"><time datetime="2018-09-14T02:38:25.000Z" itemprop="datePublished">2018-09-14</time></p>
                         </div>
                     </li>
@@ -667,18 +816,18 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Catégories</h3>
+        <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archives</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -689,7 +838,7 @@
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Liens</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 

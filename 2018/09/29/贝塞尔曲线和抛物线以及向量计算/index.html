@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Largest Rectangle in Histogram | Henry Blog</title>
+    <title>贝塞尔曲线和抛物线以及向量计算 | Henry Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="84. Largest Rectangle in Histogram   12345678910111213141516171819202122class Solution &amp;#123;public:	int largestRectangleArea(vector&amp;lt;int&amp;gt;&amp;amp; heights) &amp;#123;		heights.insert(heights.begin(), 0)">
+    <meta name="description" content="贝塞尔曲线和抛物线以及向量计算 贝塞尔曲线1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950public float[,] calculate(float[,] poss, int precision)&amp;#123;    //维度，坐标轴数（二维坐标，三维坐标...）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Largest Rectangle in Histogram">
-<meta property="og:url" content="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/index.html">
+<meta property="og:title" content="贝塞尔曲线和抛物线以及向量计算">
+<meta property="og:url" content="https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/index.html">
 <meta property="og:site_name" content="Henry Blog">
-<meta property="og:description" content="84. Largest Rectangle in Histogram   12345678910111213141516171819202122class Solution &amp;#123;public:	int largestRectangleArea(vector&amp;lt;int&amp;gt;&amp;amp; heights) &amp;#123;		heights.insert(heights.begin(), 0)">
+<meta property="og:description" content="贝塞尔曲线和抛物线以及向量计算 贝塞尔曲线1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950public float[,] calculate(float[,] poss, int precision)&amp;#123;    //维度，坐标轴数（二维坐标，三维坐标...）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-14T02:33:24.848Z">
+<meta property="og:updated_time" content="2018-09-29T08:14:36.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Largest Rectangle in Histogram">
-<meta name="twitter:description" content="84. Largest Rectangle in Histogram   12345678910111213141516171819202122class Solution &amp;#123;public:	int largestRectangleArea(vector&amp;lt;int&amp;gt;&amp;amp; heights) &amp;#123;		heights.insert(heights.begin(), 0)">
+<meta name="twitter:title" content="贝塞尔曲线和抛物线以及向量计算">
+<meta name="twitter:description" content="贝塞尔曲线和抛物线以及向量计算 贝塞尔曲线1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950public float[,] calculate(float[,] poss, int precision)&amp;#123;    //维度，坐标轴数（二维坐标，三维坐标...）">
     
 
     
@@ -212,7 +212,7 @@
 </aside>
 
             
-            <section id="main"><article id="post-84. Largest Rectangle in Histogram" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-贝塞尔曲线和抛物线以及向量计算" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -220,7 +220,7 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            Largest Rectangle in Histogram
+            贝塞尔曲线和抛物线以及向量计算
         </h1>
     
 
@@ -229,8 +229,8 @@
                         
     <div class="article-date">
         <i class="fas fa-calendar-alt"></i>
-        <a href="/2018/09/14/84. Largest Rectangle in Histogram/">
-            <time datetime="2018-09-14T02:38:25.000Z" itemprop="datePublished">2018-09-14</time>
+        <a href="/2018/09/29/贝塞尔曲线和抛物线以及向量计算/">
+            <time datetime="2018-09-29T08:13:19.000Z" itemprop="datePublished">2018-09-29</time>
         </a>
     </div>
 
@@ -238,7 +238,7 @@
                         
     <div class="article-category">
     	<i class="fas fa-folder"></i>
-        <a class="article-category-link" href="/categories/algorithm/">algorithm</a>
+        <a class="article-category-link" href="/categories/game/">game</a>
     </div>
 
                         
@@ -250,8 +250,11 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/description/" target="_blank" rel="noopener">84. Largest Rectangle in Histogram</a>  </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; heights)</span> </span>&#123;</span><br><span class="line">		heights.insert(heights.begin(), <span class="number">0</span>); <span class="comment">// dummy "0" added to make sure stack s will never be empty</span></span><br><span class="line">		heights.push_back(<span class="number">0</span>); <span class="comment">// dummy "0" added to clear the stack at the end</span></span><br><span class="line">		<span class="keyword">int</span> len = heights.size(), res = <span class="number">0</span>, idx;</span><br><span class="line">		<span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s; <span class="comment">// stack to save "heights" index</span></span><br><span class="line">		s.push(<span class="number">0</span>); <span class="comment">// index to the first dummy "0"</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&lt;len; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">while</span> (heights[i]&lt;heights[idx = s.top()]) <span class="comment">// if the current entry is out of order</span></span><br><span class="line">			&#123;</span><br><span class="line">				 s.pop();</span><br><span class="line">				res = max(res, heights[idx] * (i - s.top() - <span class="number">1</span>)); <span class="comment">// note how the width is calculated, use the previous index entry</span></span><br><span class="line">			&#125;</span><br><span class="line">			s.push(i);</span><br><span class="line">		&#125;</span><br><span class="line">		heights.erase(heights.begin()); <span class="comment">// remove two dummy "0"</span></span><br><span class="line">		heights.pop_back();</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+            <p>贝塞尔曲线和抛物线以及向量计算</p>
+<h2 id="贝塞尔曲线"><a href="#贝塞尔曲线" class="headerlink" title="贝塞尔曲线"></a>贝塞尔曲线</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">float</span>[,] calculate(<span class="keyword">float</span>[,] poss, <span class="keyword">int</span> precision)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//维度，坐标轴数（二维坐标，三维坐标...）</span></span><br><span class="line">    <span class="keyword">int</span> dimersion = poss.Rank;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//贝塞尔曲线控制点数（阶数）</span></span><br><span class="line">    <span class="keyword">int</span> number = poss.Length/<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//控制点数不小于 2 ，至少为二维坐标系</span></span><br><span class="line">    <span class="keyword">if</span> (number &lt; <span class="number">2</span> || dimersion &lt; <span class="number">2</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">float</span>[,] result = <span class="keyword">new</span> <span class="keyword">float</span>[precision,dimersion];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span>[] mi = <span class="keyword">new</span> <span class="keyword">int</span>[number];</span><br><span class="line">    mi[<span class="number">0</span>] = mi[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= number; i++)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span>[] t = <span class="keyword">new</span> <span class="keyword">int</span>[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; t.Length; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            t[j] = mi[j];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        mi[<span class="number">0</span>] = mi[i - <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i - <span class="number">2</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            mi[j + <span class="number">1</span>] = t[j] + t[j + <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//计算坐标点</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; precision; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">float</span> t = (<span class="keyword">float</span>)i / precision;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; dimersion; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">double</span> temp = <span class="number">0.0</span>f;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; number; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                temp += Math.Pow(<span class="number">1</span> - t, number - k - <span class="number">1</span>) * poss[k,j] * Math.Pow(t, k) * mi[k];</span><br><span class="line">            &#125;</span><br><span class="line">            result[i,j] = (<span class="keyword">float</span>)temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="抛物线系数计算"><a href="#抛物线系数计算" class="headerlink" title="抛物线系数计算"></a>抛物线系数计算</h2><p>以目标点为对称轴(下抛物线)，注释的以追击为对称轴(上抛物线)<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GetFactor</span>(<span class="params"><span class="keyword">float</span> x1,<span class="keyword">float</span> y1,<span class="keyword">float</span> x2, <span class="keyword">float</span> y2,<span class="keyword">ref</span> <span class="keyword">float</span> a, <span class="keyword">ref</span> <span class="keyword">float</span> b,<span class="keyword">ref</span> <span class="keyword">float</span> c</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//a = (y1 - y2) / (2 * x1 * x2 - x1 * x1 - x2 * x2);</span></span><br><span class="line">    a = (y1 - y2) / (x1 * x1 +x2* x2 <span class="number">-2</span>* x2* x1);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// b = -2 * x1 * (y1 - y2) / a;</span></span><br><span class="line">    b = <span class="number">-2</span> * x2 * a;</span><br><span class="line">    c = y1 - a * x1 * x1 - b * x1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以下是使用的一个例子：<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> a = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">float</span> b = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">float</span> c = <span class="number">0.0</span>f;</span><br><span class="line"></span><br><span class="line">GetFactor(m_fX, m_fY, m_target.m_fX, m_target.m_fY, <span class="keyword">ref</span> a,<span class="keyword">ref</span> b,<span class="keyword">ref</span> c);</span><br><span class="line"><span class="keyword">float</span> deltaX = m_myMap.GetDeltaTime() * <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(m_fX &gt; m_target.m_fX)</span><br><span class="line">    m_fX -= deltaX;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    m_fX += deltaX;</span><br><span class="line">m_fY = a * m_fX * m_fX + b * m_fX + c;</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用向量更完美的解决"><a href="#使用向量更完美的解决" class="headerlink" title="使用向量更完美的解决"></a>使用向量更完美的解决</h2><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> deltaX = m_target.getX() - m_fX;</span><br><span class="line"><span class="keyword">float</span> deltaY = m_target.getY() - m_fY;</span><br><span class="line"><span class="keyword">float</span> distance = (<span class="keyword">float</span>)Math.Sqrt(deltaX * deltaX + deltaY * deltaY);</span><br><span class="line"><span class="keyword">float</span> x_missile = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">float</span> y_missile = <span class="number">0.0</span>f;</span><br><span class="line"><span class="keyword">if</span> (distance &gt; skill.SkillDefine.DistanceEpsilon)</span><br><span class="line">&#123;</span><br><span class="line">    x_missile = deltaX / distance;</span><br><span class="line">    y_missile = deltaY / distance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">m_fPhySpeedX = x_missile * <span class="number">20</span> * <span class="number">0.2</span>f + m_fPhySpeedX * <span class="number">0.8</span>f;</span><br><span class="line">m_fPhySpeedY = y_missile * <span class="number">20</span> * <span class="number">0.2</span>f + m_fPhySpeedY * <span class="number">0.8</span>f;</span><br><span class="line"></span><br><span class="line">m_fX += m_myMap.GetDeltaTime() * m_fPhySpeedX;</span><br><span class="line">m_fY += m_myMap.GetDeltaTime() * m_fPhySpeedY;</span><br></pre></td></tr></table></figure>
         
         </div>
         <footer class="article-footer">
@@ -261,7 +264,7 @@
 
 </div>
 
-    <a data-url="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/" data-id="cjmn5v2cr0001us0xbw7anzrl" class="article-share-link"><i class="fas fa-share"></i>Share</a>
+    <a data-url="https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/" data-id="cjmn5v2d10007us0xf0hgs87u" class="article-share-link"><i class="fas fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -329,7 +332,7 @@
 
             
     
-        <a href="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/">Comments</a>
+        <a href="https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/">Comments</a>
     
 
         </footer>
@@ -338,19 +341,10 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/09/29/贝塞尔曲线和抛物线以及向量计算/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    贝塞尔曲线和抛物线以及向量计算
-                
-            </div>
-        </a>
     
-    
-        <a href="/2018/09/14/126. Word Ladder II/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2018/09/14/84. Largest Rectangle in Histogram/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">126. Word Ladder II</div>
+            <div class="article-nav-title">Largest Rectangle in Histogram</div>
         </a>
     
 </nav>
@@ -517,9 +511,9 @@
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'https://henrytien.github.io/2018/09/14/84. Largest Rectangle in Histogram/';
+            this.page.url = 'https://henrytien.github.io/2018/09/29/贝塞尔曲线和抛物线以及向量计算/';
         
-        this.page.identifier = '84. Largest Rectangle in Histogram';
+        this.page.identifier = '贝塞尔曲线和抛物线以及向量计算';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
